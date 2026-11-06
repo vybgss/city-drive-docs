@@ -1,0 +1,12 @@
+{
+  "name": "City Drive: Driving Simulator",
+  "short_name": "City Drive",
+  "start_url": "marketing.html",
+  "display": "browser",
+  "background_color": "#1a6be6",
+  "theme_color": "#1a6be6",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
