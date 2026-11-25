@@ -363,8 +363,9 @@ summary:focus-visible { outline: 2px solid #fff; outline-offset: -3px; border-ra
 .lesson span { font-size: 14.5px; line-height: 1.45; color: var(--text-3); }
 
 /* Marketing: packs */
-.packs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.pack { display: flex; flex-direction: column; align-items: flex-start; }
+/* flex rows: five packs wrap 3 + 2 on desktop, 2 + 2 + 1 on tablets, 1 per row on phones */
+.packs { display: flex; flex-wrap: wrap; gap: 16px; }
+.pack { flex: 1 1 300px; display: flex; flex-direction: column; align-items: flex-start; }
 .pack .badge .icon { width: 13px; height: 13px; }
 .pack .chip { margin-top: auto; }
 .pack p { margin-bottom: 16px; }
@@ -443,7 +444,6 @@ summary:focus-visible { outline: 2px solid #fff; outline-offset: -3px; border-ra
 
 @media (max-width: 1000px) {
   .features { grid-template-columns: repeat(2, 1fr); }
-  .packs { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 760px) {
@@ -456,7 +456,7 @@ summary:focus-visible { outline: 2px solid #fff; outline-offset: -3px; border-ra
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .nav a { padding: 6px 10px; }
-  .features, .packs { grid-template-columns: 1fr; }
+  .features { grid-template-columns: 1fr; }
   .card { padding: 20px; }
   .contact .button { width: 100%; }
   .actions .button { width: 100%; padding: 13px 18px; font-size: 17px; }
